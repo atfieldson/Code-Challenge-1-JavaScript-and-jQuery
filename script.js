@@ -9,21 +9,22 @@ function readyNow(){
 let amountOfClicks = 0
 
 function createButtonClick(){
-    console.log( 'boom' );
+    //increment amountOfClicks
     amountOfClicks ++;
+    // append new structure
     $( '#createdStructures' ).append( `
     <div class="createdStructure">
-        <p id=numberTitle>` + amountOfClicks + `</p>
-        <button class=createdButton id=swapColor>Swap Color</button><button class=createdButton id=deleteButton>Delete</button>
+        <p id=amountOfClicksText>` + amountOfClicks + `</p>
+        <button class=createdButton id=swapColor>Swap</button><button class=createdButton id=deleteButton>Delete</button>
     </div>`)
 }
 
 function changeColor(){
-    console.log( this );
+    //toggle color of structure from red to yellow and vise versa
     this.parentElement.classList.toggle( "createdStructure2")
 }
 
 function deleteCreatedStructure(){
-    console.log( this.parentElement );
+    //delete the selected structure
     this.parentElement.remove(); 
 }
