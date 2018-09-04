@@ -13,8 +13,8 @@ function createButtonClick(){
     amountOfClicks ++;
     $( '#createdStructures' ).append( `
     <div class="createdStructure">
-        <p>` + amountOfClicks + `</p>
-        <button id=swapColor>Swap Color</button><button id=deleteButton>Delete</button>
+        <p id=numberTitle>` + amountOfClicks + `</p>
+        <button class=createdButton id=swapColor>Swap Color</button><button class=createdButton id=deleteButton>Delete</button>
     </div>`)
 }
 
